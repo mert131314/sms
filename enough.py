@@ -48,7 +48,7 @@ while 1:
             try:
                 with open(dizin, "r", encoding="utf-8") as f:
                     for i in f.read().strip().split("\n"):
-                        if len(i) == 10:
+                        if len(i) == 9:
                             tel_liste.append(i)
                 sonsuz = ""
             except FileNotFoundError:
@@ -59,7 +59,7 @@ while 1:
         else:
             try:
                 int(tel_no)
-                if len(tel_no) != 10:
+                if len(tel_no) != 9:
                     raise ValueError
                 tel_liste.append(tel_no)
                 sonsuz = "(Sonsuz ise 'enter' tuşuna basınız)"  
@@ -135,7 +135,7 @@ while 1:
         tel_no = input()
         try:
             int(tel_no)
-            if len(tel_no) != 10:
+            if len(tel_no) != 9:
                 raise ValueError
         except ValueError:
             system("cls||clear")
